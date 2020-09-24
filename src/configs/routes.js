@@ -2,6 +2,9 @@ import ExampleDivComponent from "../ExampleDivComponent";
 import ShowRoomCart from "../ShowRoomCar";
 import Home from "../Home";
 import Cart from "../Cart";
+import BaiTapXucXac from "../BaiTapXucXac";
+import UserMangerment from "../user-managerment/Home";
+
 export default [
   {
     exact: true,
@@ -22,5 +25,15 @@ export default [
     exact: true,
     path: "/cart",
     Component: Cart,
+  },
+  {
+    exact: true,
+    path: "/example-xuc-xac",
+    Component: BaiTapXucXac,
+  },
+  {
+    exact: true,
+    path: "/user-managerment",
+    Component: UserMangerment,
   },
 ];
