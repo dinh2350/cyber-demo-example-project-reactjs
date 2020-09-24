@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import BanCuoc from "./BanCuoc";
 import KetQuaTroChoi from "./KetQuaTroChoi";
 import styleGame from "./BaiTapXucXac.module.css";
-export default class BaiTapXucXac extends Component {
-  render() {
-    return (
+
+function BaiTapXucXac() {
+  return (
+    <div>
       <div
         className={styleGame.gameXucXac}
         style={{
@@ -19,6 +20,8 @@ export default class BaiTapXucXac extends Component {
         <BanCuoc />
         <KetQuaTroChoi />
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+export default BaiTapXucXac;

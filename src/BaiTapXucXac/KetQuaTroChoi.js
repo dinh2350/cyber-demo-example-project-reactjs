@@ -1,47 +1,51 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+function KetQuaTroChoi() {
+  const dispatch = useDispatch();
+  const { banChon, soBanThang, soBanChoi } = useSelector(
+    (state) => state.BaiTapGameXucXacReducer
+  );
+  const handlePlayGame = () => {
+    var number = 0;
 
-class KetQuaTroChoi extends Component {
-    render() {
-        return (
-            <div className="container text-center display-4">
-                <div>bạn chọn : <span className="text-danger">{this.props.banChon}</span></div>
-                <div>số bàn thắng : <span className="text-success">{this.props.soBanThang}</span></div>
-                <div>tổng số bàn chơi : <span className="text-warning">{this.props.soBanChoi}</span></div>
+    let randomXiNgau = setInterval(() => {
+      number += 1;
+      dispatch({
+        type: "RANDOM_XI_NGAU",
+      });
 
-                <button onClick={() => {
+      if (number > 10) {
+        //dừng hàm random
+        clearInterval(randomXiNgau);
+        //random 10 lần gọi hàm tính điểm
+        dispatch({
+          type: "TINH_DIEM",
+        });
+      }
+    }, 100);
+  };
 
-                 var number = 0 ;
+  return (
+    <div className="container text-center display-4">
+      <div>
+        bạn chọn : <span className="text-danger">{banChon}</span>
+      </div>
+      <div>
+        số bàn thắng : <span className="text-success">{soBanThang}</span>
+      </div>
+      <div>
+        tổng số bàn chơi : <span className="text-warning">{soBanChoi}</span>
+      </div>
 
-                 let randomXiNgau = setInterval(() => {
-
-                        number += 1;
-                        this.props.dispatch({
-                            type: 'RANDOM_XI_NGAU',
-                        });
-
-                        if(number>10){
-                            //dừng hàm random
-                            clearInterval(randomXiNgau);
-                            //random 10 lần gọi hàm tính điểm 
-                            this.props.dispatch({
-                                type:'TINH_DIEM'
-                            });
-                            
-                        }
-
-                    }, 100);
-
-                }} className="btn btn-success" style={{ fontSize: 30 }} >PLAY GAME</button>
-            </div>
-        )
-    }
+      <button
+        onClick={handlePlayGame}
+        className="btn btn-success"
+        style={{ fontSize: 30 }}
+      >
+        PLAY GAME
+      </button>
+    </div>
+  );
 }
-const mapStateToProps = state => {
-    return {
-        banChon: state.BaiTapGameXucXacReducer.banChon,
-        soBanThang: state.BaiTapGameXucXacReducer.soBanThang,
-        soBanChoi: state.BaiTapGameXucXacReducer.soBanChoi
-    }
-}
-export default connect(mapStateToProps)(KetQuaTroChoi)
+
+export default KetQuaTroChoi;
