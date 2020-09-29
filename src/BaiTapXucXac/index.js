@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import BanCuoc from "./BanCuoc";
 import KetQuaTroChoi from "./KetQuaTroChoi";
-import styleGame from "./BaiTapXucXac.module.css";
-
+import "./BaiTapXucXac.scss";
+import data from "./mangXucXac.json";
 function BaiTapXucXac() {
+  const dispatch = useDispatch();
+
+  useEffect(function () {
+    dispatch({
+      type: "SET_DANH_SACH_XUC_XAC",
+      payload: data,
+    });
+  }, []);
+
   return (
     <div>
       <div
-        className={styleGame.gameXucXac}
+        className="gameXucXac"
         style={{
           backgroundImage: 'url("./img/gameXucXac/bgGame.png")',
           width: "100%",

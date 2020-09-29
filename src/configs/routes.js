@@ -4,7 +4,7 @@ import Home from "../Home";
 import Cart from "../Cart";
 import BaiTapXucXac from "../BaiTapXucXac";
 import UserMangerment from "../user-managerment/Home";
-
+import Glasses from "../Glasses";
 export default [
   {
     exact: true,
@@ -20,6 +20,11 @@ export default [
     exact: true,
     path: "/show-room-car",
     Component: ShowRoomCart,
+  },
+  {
+    exact: true,
+    path: "/glasses",
+    Component: Glasses,
   },
   {
     exact: true,

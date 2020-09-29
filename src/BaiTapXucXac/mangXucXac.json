@@ -1,0 +1,31 @@
+[{
+        "ma": 1,
+        "hinhAnh": "./img/gameXucXac/1.png",
+        "soDiem": 1
+    },
+    {
+        "ma": 2,
+        "hinhAnh": "./img/gameXucXac/2.png",
+        "soDiem": 2
+    },
+    {
+        "ma": 3,
+        "hinhAnh": "./img/gameXucXac/3.png",
+        "soDiem": 3
+    },
+    {
+        "ma": 4,
+        "hinhAnh": "./img/gameXucXac/4.png",
+        "soDiem": 4
+    },
+    {
+        "ma": 5,
+        "hinhAnh": "./img/gameXucXac/5.png",
+        "soDiem": 5
+    },
+    {
+        "ma": 6,
+        "hinhAnh": "./img/gameXucXac/6.png",
+        "soDiem": 6
+    }
+]
