@@ -5,7 +5,7 @@ export default class BaitapShowRoomCar extends Component {
     srcImg: "./img/car/products/red-car.jpg",
   };
   handleChangeColor = (e, linkImg) => {
-    e.preventDefault();
+    // e.preventDefault();
     this.setState({
       srcImg: linkImg,
     });
@@ -16,8 +16,8 @@ export default class BaitapShowRoomCar extends Component {
         <h2 className="text-center">Bài Tập Chọn Màu Xe</h2>
         <div className="container">
           <div className="chose__color d-flex justify-content-around">
-            <a
-              href="/"
+            <button
+              className="btn"
               onClick={(e) => {
                 this.handleChangeColor(e, "./img/car/products/black-car.jpg");
               }}
@@ -27,9 +27,9 @@ export default class BaitapShowRoomCar extends Component {
                 alt="hinh"
                 style={{ width: 50 }}
               />
-            </a>
-            <a
-              href="/"
+            </button>
+            <button
+              className="btn"
               onClick={(e) => {
                 this.handleChangeColor(e, "./img/car/products/red-car.jpg");
               }}
@@ -39,9 +39,9 @@ export default class BaitapShowRoomCar extends Component {
                 alt="hinh"
                 style={{ width: 50 }}
               />
-            </a>
-            <a
-              href="/"
+            </button>
+            <button
+              className="btn"
               onClick={(e) => {
                 this.handleChangeColor(e, "./img/car/products/silver-car.jpg");
               }}
@@ -51,9 +51,9 @@ export default class BaitapShowRoomCar extends Component {
                 alt="hinh"
                 style={{ width: 50 }}
               />
-            </a>
-            <a
-              href="/"
+            </button>
+            <button
+              className="btn"
               onClick={(e) => {
                 this.handleChangeColor(e, "./img/car/products/steel-car.jpg");
               }}
@@ -63,9 +63,9 @@ export default class BaitapShowRoomCar extends Component {
                 alt="hinh"
                 style={{ width: 50 }}
               />
-            </a>
+            </button>
           </div>
-          <div className="car">
+          <div className="car mt-2">
             <img className="img-thumbnail" src={this.state.srcImg} alt="hinh" />
           </div>
         </div>
