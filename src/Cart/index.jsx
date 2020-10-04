@@ -144,10 +144,10 @@ export default class LiftingStateUpCart extends Component {
   render() {
     return (
       <div>
-        <h3 className="title">Bài tập giỏ hàng</h3>
-        <div className="container">
+        <h3 className="title text-center">Bài tập giỏ hàng</h3>
+        <div className="container text-center my-2">
           <button
-            className="btn btn-danger"
+            className="btn btn-danger "
             data-toggle="modal"
             data-target="#modelId"
           >
