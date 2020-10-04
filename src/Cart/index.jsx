@@ -143,7 +143,7 @@ export default class LiftingStateUpCart extends Component {
 
   render() {
     return (
-      <div>
+      <section className="container">
         <h3 className="title text-center">Bài tập giỏ hàng</h3>
         <div className="container text-center my-2">
           <button
@@ -204,7 +204,7 @@ export default class LiftingStateUpCart extends Component {
             </table>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
