@@ -39,7 +39,7 @@ class Users extends Component {
 
   render() {
     return (
-      <div>
+      <div className="user-list">
         <table className="table">
           <thead>
             <tr>

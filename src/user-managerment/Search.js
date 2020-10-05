@@ -6,7 +6,8 @@ class Search extends Component {
     return (
       <input
         type="text"
-        className="form-control mb-3 w-50"
+        className="input-search form-control mb-3 w-50"
+        placeholder="Search Name ..."
         onChange={(e) => {
           this.props.onKeyWord(e.target.value);
         }}

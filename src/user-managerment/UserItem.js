@@ -5,7 +5,7 @@ class UserItem extends Component {
   render() {
     let { user } = this.props;
     return (
-      <tr>
+      <tr className="user-item">
         <td>{user.name}</td>
         <td>{user.username}</td>
         <td>{user.email}</td>

@@ -34,7 +34,7 @@ class Modal extends Component {
   render() {
     return (
       <div
-        className="modal fade"
+        className="form-user modal fade"
         id="modelIdUser"
         tabIndex={-1}
         role="dialog"

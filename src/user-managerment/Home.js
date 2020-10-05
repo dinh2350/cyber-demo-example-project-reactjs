@@ -7,7 +7,7 @@ import Axios from "axios";
 class Home extends Component {
   render() {
     return (
-      <div className="container">
+      <section className="user-managerment container">
         <h1 className="display-4 text-center my-3">User Management</h1>
         <div className="d-flex justify-content-between align-items-center">
           <Search />
@@ -31,7 +31,7 @@ class Home extends Component {
         // onSave={this.handleOnSave}
         // userEdit={this.state.userEdit}
         />
-      </div>
+      </section>
     );
   }
   componentDidMount() {
