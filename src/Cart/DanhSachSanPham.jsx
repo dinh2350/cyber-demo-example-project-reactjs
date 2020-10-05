@@ -15,7 +15,7 @@ export default class DanhSachSanPham extends Component {
   };
   render() {
     return (
-      <div className="container">
+      <div className="container danh-sach-san-pham">
         <div className="row">{this.renderProductList()}</div>
       </div>
     );

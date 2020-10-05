@@ -4,7 +4,7 @@ export default class Modal extends Component {
   renderCartList = () => {
     return this.props.cartList.map((cart, index) => {
       return (
-        <tr key={index}>
+        <tr key={index} class="card-item">
           <td>{index + 1}</td>
           <td>{cart.tenSP}</td>
           <td>
