@@ -5,6 +5,7 @@ import Cart from "../Cart";
 import BaiTapXucXac from "../BaiTapXucXac";
 import UserMangerment from "../user-managerment/Home";
 import Glasses from "../Glasses";
+import BaiTapGameBauCua from "../BaiTapGameBauCua/BaiTapGameBauCua";
 export default [
   {
     exact: true,
@@ -30,6 +31,11 @@ export default [
     exact: true,
     path: "/cart",
     Component: Cart,
+  },
+  {
+    exact: true,
+    path: "/game-bau-cua",
+    Component: BaiTapGameBauCua,
   },
   {
     exact: true,
